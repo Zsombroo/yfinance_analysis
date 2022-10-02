@@ -1,0 +1,14 @@
+[Unit]
+Description=Yahoo Finance data fetcher service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=no
+RestartSec=1
+User=zsombortoth
+ExecStart=/usr/bin/python /home/{username}/yfinance_analysis/yfinance_service.py
+
+[Install]
+WantedBy=multi-user.target
