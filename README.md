@@ -45,3 +45,19 @@ systemctl start yfinance.service
 systemctl disable yfinance.service
 sudo rm /etc/systemd/system/yfinance.service
 ```
+
+#### Alternative method
+
+You will most likely need to add execution permission so first run the following commands:
+
+```
+chmod +x unix_service/install_service.sh
+chmod +x unix_service/start_service.sh
+```
+
+You can also install the service and restart it anytime using the following scripts:
+
+```
+unix_service/install_service.sh
+unix_service/start_service.sh
+```
